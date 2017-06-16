@@ -1,8 +1,10 @@
 package com.example.kaushik.app1;
 
+import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -17,7 +19,7 @@ public class Activity0 extends AppCompatActivity {
         setContentView(R.layout.activity_0);
 
         done = (Button)findViewById(R.id.button_Done);
-        
+
         RadioGroup radioGroup_sex = (RadioGroup)findViewById(R.id.radioGroup);
         radioGroup_sex.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -33,4 +35,13 @@ public class Activity0 extends AppCompatActivity {
             }
         });
     }
+
+    public void gotoActivity2 (View v){
+        Intent gotoAct2 = new Intent();
+        gotoAct2.setClass(this, Activity1.class);
+        startActivity(gotoAct2);
+        finish();
+    }
+
 }
+
